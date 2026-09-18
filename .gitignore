@@ -1,0 +1,5 @@
+ferramentas/_html/
+__pycache__/
+.claude/
+CLAUDE.md
+.env
