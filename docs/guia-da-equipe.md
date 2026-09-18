@@ -78,7 +78,7 @@ cada decisão, e este guia serve para isso.
 
 | Tempo | Parte | Quem |
 |---|---|---|
-| 2 min | Domínio e regras de negócio (A1) | ______ |
+| 2 min | Domínio e regras de negócio (A1) | Gabriel |
 | 3 min | MER: especialização, fraca, autorrelacionamento, N:N (A2) | ______ |
 | 3 min | Modelo lógico e normalização (A4 e A5) | ______ |
 | 3 min | Scripts: rodar DDL, carga e 2 ou 3 consultas ao vivo (C11 e C15) | ______ |
