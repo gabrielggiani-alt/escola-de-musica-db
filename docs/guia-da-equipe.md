@@ -79,9 +79,10 @@ cada decisão, e este guia serve para isso.
 | Tempo | Parte | Quem |
 |---|---|---|
 | 2 min | Domínio e regras de negócio (A1) | Gabriel |
-| 3 min | MER: especialização, fraca, autorrelacionamento, N:N (A2) | ______ |
-| 3 min | Modelo lógico e normalização (A4 e A5) | ______ |
-| 3 min | Scripts: rodar DDL, carga e 2 ou 3 consultas ao vivo (C11 e C15) | ______ |
+| 2,5 min | MER: especialização, fraca, autorrelacionamento, N:N (A2) | ______ |
+| 2,5 min | Modelo lógico: decisões de mapeamento e chaves (A4) | ______ |
+| 2 min | Normalização: dependências funcionais, 3FN e o caso do CEP (A5) | ______ |
+| 2 min | Scripts: rodar DDL, carga e as consultas C11 e C15 ao vivo | ______ |
 | 1 min | Perguntas | todos |
 
 ## 5. Antes de entregar (checklist do Anexo B)
