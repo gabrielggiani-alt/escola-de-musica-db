@@ -39,6 +39,18 @@ ferramentas/
   gerar_docs.py             gera os PDFs de docs/
 ```
 
+## Rodando em outro computador (laboratório da faculdade)
+
+1. Baixar o projeto: botão verde **Code → Download ZIP** no GitHub, ou `git clone`.
+2. Abrir o MySQL Workbench e conectar no servidor MySQL da máquina.
+3. Executar `sql/01_ddl.sql`, `sql/02_carga.sql` e `sql/03_consultas.sql`, nesta ordem.
+
+Os scripts não dependem de nada além de um MySQL 8. O `01_ddl.sql` recria o banco do
+zero, então pode ser executado quantas vezes for preciso.
+
+Se não houver MySQL disponível na máquina, `docs/resultados-consultas.txt` traz a saída
+das 15 consultas já executada.
+
 ## Como reconstruir o banco do zero
 
 Com um MySQL 8 rodando, na pasta do projeto:

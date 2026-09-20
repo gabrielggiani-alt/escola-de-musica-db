@@ -1,0 +1,301 @@
+Resultado das 15 consultas de 03_consultas.sql
+Gerado em 20/09/2026, MySQL 8.4.9, base recriada do zero.
+
++-------------------------------+-------+-------------------------------+
+| nome                          | idade | nome_responsavel              |
++-------------------------------+-------+-------------------------------+
+| Henrique Esteves Teixeira     |    11 | Heitor Santos Ribeiro         |
+| Mateus Pacheco Campos         |    11 | Valentina Campos Rocha        |
+| Nicolas Esteves Dias          |    11 | Valentina Lima Barbosa        |
+| Valentina Ferreira Dias       |    11 | Otávio Ferreira Teixeira      |
+| Alice Henriques Pereira       |    13 | Leonardo Almeida Santos       |
+| Gabriela Siqueira Vasconcelos |    13 | Gustavo Queiroz Siqueira      |
+| Alice Santos Rocha            |    14 | Davi Vasconcelos Almeida      |
+| Arthur Henriques Vasconcelos  |    14 | Ana Oliveira Teixeira         |
+| Arthur Queiroz Siqueira       |    14 | Manuela Vasconcelos Barbosa   |
+| Larissa Dias Ferreira         |    14 | Helena Teixeira Ribeiro       |
+| Mateus Gomes Barbosa          |    14 | Gabriela Queiroz Henriques    |
+| Carla Esteves Ribeiro         |    16 | Daniel Cardoso Ribeiro        |
+| Fábio Queiroz Dias            |    16 | Lucas Teixeira Queiroz        |
+| Nicolas Queiroz Esteves       |    16 | Bernardo Vasconcelos Teixeira |
+| Ulisses Machado Almeida       |    16 | Manuela Almeida Siqueira      |
++-------------------------------+-------+-------------------------------+
++----------------------------+-----------+-----------------+
+| nome                       | bairro    | logradouro      |
++----------------------------+-----------+-----------------+
+| Beatriz Moreira Rocha      | Asa Norte | SQN 314 Bloco E |
+| Beatriz Rocha Santos       | Asa Norte | SQN 313 Bloco A |
+| Carla Esteves Ribeiro      | Asa Norte | SQN 308 Bloco F |
+| Gustavo Moreira Santos     | Asa Norte | SQN 216 Bloco F |
+| Isabela Pereira Gomes      | Asa Norte | SQN 408 Bloco F |
+| Nicolas Esteves Dias       | Asa Norte | SQN 308 Bloco A |
+| Pedro Pereira Oliveira     | Asa Norte | SQN 105 Bloco D |
+| Valentina Lima Queiroz     | Asa Norte | SQN 311 Bloco I |
+| Arthur Ribeiro Queiroz     | Asa Sul   | SQS 416 Bloco J |
+| Gabriela Queiroz Ferreira  | Asa Sul   | SQS 114 Bloco F |
+| Leonardo Teixeira Pereira  | Asa Sul   | SQS 202 Bloco H |
+| Mateus Gomes Barbosa       | Asa Sul   | SQS 204 Bloco A |
+| Natália Teixeira Oliveira  | Asa Sul   | SQS 412 Bloco G |
+| Nicolas Queiroz Esteves    | Asa Sul   | SQS 112 Bloco H |
++----------------------------+-----------+-----------------+
++----------------+--------------+-------------+-----------------+--------+
+| id_mensalidade | id_matricula | competencia | data_vencimento | valor  |
++----------------+--------------+-------------+-----------------+--------+
+|            227 |           62 | 2026-08-01  | 2026-08-10      | 280.00 |
+|            180 |           38 | 2026-09-01  | 2026-09-10      | 300.00 |
+|            194 |           45 | 2026-09-01  | 2026-09-10      | 300.00 |
+|            228 |           62 | 2026-09-01  | 2026-09-10      | 280.00 |
+|            236 |           66 | 2026-09-01  | 2026-09-10      | 280.00 |
++----------------+--------------+-------------+-----------------+--------+
++------------+------------+----------------+---------+
+| codigo     | dia_semana | horario_inicio | id_sala |
++------------+------------+----------------+---------+
+| VIO-B2-26B |          2 | 18:30:00       |       3 |
+| VNO-B2-26B |          4 | 16:00:00       |       4 |
+| VIO-B1-26C |          4 | 19:30:00       |       3 |
+| PIA-B1-26B |          6 | 10:00:00       |       2 |
+| VIO-IN-26B |          6 | 15:00:00       |       4 |
++------------+------------+----------------+---------+
++-------------------------------+------------------------------------+------------------------+------------+
+| nome                          | contato_email                      | cidade                 | cadastro   |
++-------------------------------+------------------------------------+------------------------+------------+
+| Beatriz Lima Ribeiro          | sem e-mail cadastrado              | Brasília               | INCOMPLETO |
+| Beatriz Moreira Rocha         | sem e-mail cadastrado              | Brasília               | INCOMPLETO |
+| Bruno Xavier Henriques        | bruno.henriques4@exemplo.com       | endereco nao informado | INCOMPLETO |
+| Davi Dias Almeida             | sem e-mail cadastrado              | Brasília               | INCOMPLETO |
+| Fábio Queiroz Dias            | sem e-mail cadastrado              | Brasília               | INCOMPLETO |
+| Gabriela Siqueira Vasconcelos | gabriela.vasconcelos14@exemplo.com | endereco nao informado | INCOMPLETO |
+| Larissa Dias Ferreira         | sem e-mail cadastrado              | endereco nao informado | INCOMPLETO |
+| Leonardo Teixeira Pereira     | sem e-mail cadastrado              | Brasília               | INCOMPLETO |
+| Manuela Siqueira Ferreira     | sem e-mail cadastrado              | endereco nao informado | INCOMPLETO |
+| Nicolas Queiroz Esteves       | sem e-mail cadastrado              | Brasília               | INCOMPLETO |
+| Rafael Nogueira Almeida       | sem e-mail cadastrado              | Brasília               | INCOMPLETO |
+| Rafael Oliveira Cardoso       | rafael.cardoso37@exemplo.com       | endereco nao informado | INCOMPLETO |
+| Samuel Rocha Barbosa          | sem e-mail cadastrado              | Brasília               | INCOMPLETO |
+| Tatiane Dias Queiroz          | sem e-mail cadastrado              | Brasília               | INCOMPLETO |
+| Thiago Lima Siqueira          | sem e-mail cadastrado              | Brasília               | INCOMPLETO |
+| Ulisses Machado Almeida       | sem e-mail cadastrado              | endereco nao informado | INCOMPLETO |
++-------------------------------+------------------------------------+------------------------+------------+
++------------+----------------------+----------------------------+-------------------------------+
+| codigo     | nivel                | professor                  | aluno                         |
++------------+----------------------+----------------------------+-------------------------------+
+| BAT-B2-26B | Bateria Básico II    | Eduarda Rocha Lima         | Gustavo Moreira Santos        |
+| BAT-B2-26B | Bateria Básico II    | Eduarda Rocha Lima         | Nicolas Esteves Dias          |
+| BAT-B2-26B | Bateria Básico II    | Eduarda Rocha Lima         | Rafael Oliveira Cardoso       |
+| BAT-B2-26B | Bateria Básico II    | Eduarda Rocha Lima         | Wagner Pacheco Cardoso        |
+| CAN-IN-26B | Canto Intermediário  | Helena Pacheco Vasconcelos | Gabriela Queiroz Ferreira     |
+| CAN-IN-26B | Canto Intermediário  | Helena Pacheco Vasconcelos | Gabriela Siqueira Vasconcelos |
+| CAN-IN-26B | Canto Intermediário  | Helena Pacheco Vasconcelos | Isabela Pereira Gomes         |
+| CAN-IN-26B | Canto Intermediário  | Helena Pacheco Vasconcelos | Leonardo Teixeira Pereira     |
+| CAN-IN-26B | Canto Intermediário  | Helena Pacheco Vasconcelos | Nicolas Pacheco Esteves       |
+| PIA-B1-26B | Piano Básico I       | Helena Pacheco Vasconcelos | Arthur Gomes Lima             |
+| PIA-B1-26B | Piano Básico I       | Helena Pacheco Vasconcelos | Beatriz Moreira Rocha         |
+| PIA-B1-26B | Piano Básico I       | Helena Pacheco Vasconcelos | Rafael Nogueira Almeida       |
+| PIA-B1-26B | Piano Básico I       | Helena Pacheco Vasconcelos | Ulisses Machado Almeida       |
+| PIA-B2-26B | Piano Básico II      | Caio Lima Oliveira         | Alice Henriques Pereira       |
+| PIA-B2-26B | Piano Básico II      | Caio Lima Oliveira         | Beatriz Lima Ribeiro          |
+| PIA-B2-26B | Piano Básico II      | Caio Lima Oliveira         | Daniel Campos Pacheco         |
+| PIA-B2-26B | Piano Básico II      | Caio Lima Oliveira         | Rafael Nogueira Dias          |
+| PIA-B2-26B | Piano Básico II      | Caio Lima Oliveira         | Rafael Teixeira Campos        |
+| VIO-B1-26C | Violão Básico I      | Arthur Gomes Lima          | Arthur Henriques Vasconcelos  |
+| VIO-B1-26C | Violão Básico I      | Arthur Gomes Lima          | Davi Dias Almeida             |
+| VIO-B1-26C | Violão Básico I      | Arthur Gomes Lima          | Isabela Dias Nogueira         |
+| VIO-B1-26C | Violão Básico I      | Arthur Gomes Lima          | Miguel Ferreira Henriques     |
+| VIO-B1-26C | Violão Básico I      | Arthur Gomes Lima          | Olívia Siqueira Cardoso       |
+| VIO-B1-26C | Violão Básico I      | Arthur Gomes Lima          | Rafael Vasconcelos Santos     |
+| VIO-B2-26B | Violão Básico II     | Júlia Rocha Dias           | Larissa Dias Ferreira         |
+| VIO-B2-26B | Violão Básico II     | Júlia Rocha Dias           | Larissa Henriques Ferreira    |
+| VIO-B2-26B | Violão Básico II     | Júlia Rocha Dias           | Larissa Moreira Teixeira      |
+| VIO-B2-26B | Violão Básico II     | Júlia Rocha Dias           | Nicolas Queiroz Esteves       |
+| VIO-B2-26B | Violão Básico II     | Júlia Rocha Dias           | Pedro Pereira Oliveira        |
+| VIO-B2-26B | Violão Básico II     | Júlia Rocha Dias           | Samuel Rocha Barbosa          |
+| VIO-B2-26B | Violão Básico II     | Júlia Rocha Dias           | Valentina Lima Queiroz        |
+| VNO-B2-26B | Violino Básico II    | Arthur Ribeiro Queiroz     | Carla Esteves Ribeiro         |
+| VNO-B2-26B | Violino Básico II    | Arthur Ribeiro Queiroz     | Fábio Queiroz Dias            |
+| VNO-B2-26B | Violino Básico II    | Arthur Ribeiro Queiroz     | Tatiane Dias Queiroz          |
++------------+----------------------+----------------------------+-------------------------------+
++--------------------+------------------------+------------+
+| instrumento        | nivel                  | qtd_turmas |
++--------------------+------------------------+------------+
+| Bateria            | Bateria Básico I       |          1 |
+| Bateria            | Bateria Básico II      |          1 |
+| Canto              | Canto Básico I         |          1 |
+| Canto              | Canto Intermediário    |          1 |
+| Flauta transversal | Flauta Básico I        |          0 |
+| Piano              | Piano Básico I         |          2 |
+| Piano              | Piano Básico II        |          1 |
+| Piano              | Piano Intermediário    |          0 |
+| Violão             | Violão Básico I        |          3 |
+| Violão             | Violão Básico II       |          1 |
+| Violão             | Violão Intermediário   |          1 |
+| Violino            | Violino Básico I       |          1 |
+| Violino            | Violino Básico II      |          1 |
++--------------------+------------------------+------------+
++------------+-------+--------+--------------+
+| codigo     | vagas | ativos | ocupacao_pct |
++------------+-------+--------+--------------+
+| VIO-IN-26B |     6 |      0 |          0.0 |
+| CAN-IN-26B |    12 |      5 |         41.7 |
++------------+-------+--------+--------------+
++---------+-----------------+----------------+----------------+
+| mes     | forma_pagamento | qtd_pagamentos | total_recebido |
++---------+-----------------+----------------+----------------+
+| 2026-02 | PIX             |             24 |        6880.00 |
+| 2026-02 | BOLETO          |              4 |        1160.00 |
+| 2026-02 | CARTAO          |              4 |        1120.00 |
+| 2026-02 | DINHEIRO        |              3 |         840.00 |
+| 2026-03 | PIX             |             17 |        4920.00 |
+| 2026-03 | DINHEIRO        |              9 |        2520.00 |
+| 2026-03 | BOLETO          |              7 |        2000.00 |
+| 2026-03 | CARTAO          |              2 |         560.00 |
+| 2026-04 | PIX             |             16 |        4560.00 |
+| 2026-04 | BOLETO          |             11 |        3120.00 |
+| 2026-04 | DINHEIRO        |              6 |        1720.00 |
+| 2026-04 | CARTAO          |              2 |         560.00 |
+| 2026-05 | PIX             |             16 |        4640.00 |
+| 2026-05 | DINHEIRO        |              8 |        2240.00 |
+| 2026-05 | BOLETO          |              5 |        1400.00 |
+| 2026-05 | CARTAO          |              3 |         880.00 |
+| 2026-06 | PIX             |             16 |        4560.00 |
+| 2026-06 | CARTAO          |              7 |        2000.00 |
+| 2026-06 | DINHEIRO        |              4 |        1120.00 |
+| 2026-06 | BOLETO          |              4 |        1120.00 |
+| 2026-08 | PIX             |             19 |        5840.00 |
+| 2026-08 | CARTAO          |              7 |        2080.00 |
+| 2026-08 | BOLETO          |              4 |        1240.00 |
+| 2026-08 | DINHEIRO        |              4 |        1200.00 |
+| 2026-09 | PIX             |             22 |        6760.00 |
+| 2026-09 | DINHEIRO        |              6 |        1840.00 |
+| 2026-09 | BOLETO          |              2 |         600.00 |
+| 2026-09 | CARTAO          |              1 |         280.00 |
++---------+-----------------+----------------+----------------+
++------------+-----------+----------------+
+| codigo     | registros | frequencia_pct |
++------------+-----------+----------------+
+| VIO-B2-26B |        42 |           76.2 |
+| BAT-B1-26A |        80 |           80.0 |
+| PIA-B2-26B |        35 |           80.0 |
+| CAN-IN-26B |        30 |           80.0 |
++------------+-----------+----------------+
++-------------------------------+------------+-------+----------------+-----------+
+| aluno                         | codigo     | media | frequencia_pct | resultado |
++-------------------------------+------------+-------+----------------+-----------+
+| Gustavo Moreira Santos        | BAT-B1-26A |  7.83 |           80.0 | APROVADO  |
+| Nicolas Esteves Dias          | BAT-B1-26A |  6.67 |           80.0 | APROVADO  |
+| Rafael Oliveira Cardoso       | BAT-B1-26A |  6.00 |           80.0 | APROVADO  |
+| Wagner Pacheco Cardoso        | BAT-B1-26A |  8.00 |           80.0 | APROVADO  |
+| Felipe Pereira Machado        | CAN-B1-26A |  8.83 |           83.3 | APROVADO  |
+| Gabriela Queiroz Ferreira     | CAN-B1-26A |  7.33 |           83.3 | APROVADO  |
+| Gabriela Siqueira Vasconcelos | CAN-B1-26A |  9.67 |           83.3 | APROVADO  |
+| Isabela Pereira Gomes         | CAN-B1-26A |  9.67 |           83.3 | APROVADO  |
+| Leonardo Teixeira Pereira     | CAN-B1-26A |  7.00 |           83.3 | APROVADO  |
+| Nicolas Pacheco Esteves       | CAN-B1-26A |  7.33 |           94.4 | APROVADO  |
+| Valentina Ferreira Dias       | CAN-B1-26A |  6.67 |           83.3 | APROVADO  |
+| Wagner Rocha Siqueira         | CAN-B1-26A |  3.33 |          100.0 | REPROVADO |
+| Alice Henriques Pereira       | PIA-B1-26A |  6.67 |           94.7 | APROVADO  |
+| Beatriz Lima Ribeiro          | PIA-B1-26A |  6.33 |           84.2 | APROVADO  |
+| Daniel Campos Pacheco         | PIA-B1-26A |  7.17 |           89.5 | APROVADO  |
+| Rafael Nogueira Dias          | PIA-B1-26A |  6.17 |           84.2 | APROVADO  |
+| Rafael Teixeira Campos        | PIA-B1-26A |  6.50 |           78.9 | APROVADO  |
+| Fábio Dias Esteves            | VIO-B1-26A |  8.83 |           90.0 | APROVADO  |
+| Manuela Siqueira Ferreira     | VIO-B1-26A |  9.17 |           85.0 | APROVADO  |
+| Natália Teixeira Oliveira     | VIO-B1-26A |  8.83 |           80.0 | APROVADO  |
+| Samuel Rocha Barbosa          | VIO-B1-26A |  8.33 |           85.0 | APROVADO  |
+| Valentina Lima Queiroz        | VIO-B1-26A |  9.33 |          100.0 | APROVADO  |
+| Alice Santos Rocha            | VIO-B1-26A |  3.17 |           90.0 | REPROVADO |
+| Larissa Dias Ferreira         | VIO-B1-26B |  6.50 |           85.0 | APROVADO  |
+| Larissa Henriques Ferreira    | VIO-B1-26B |  8.83 |           80.0 | APROVADO  |
+| Larissa Moreira Teixeira      | VIO-B1-26B |  8.00 |           95.0 | APROVADO  |
+| Mateus Pacheco Campos         | VIO-B1-26B |  7.67 |           80.0 | APROVADO  |
+| Nicolas Queiroz Esteves       | VIO-B1-26B |  7.17 |           85.0 | APROVADO  |
+| Pedro Pereira Oliveira        | VIO-B1-26B |  7.00 |           95.0 | APROVADO  |
+| Carla Esteves Ribeiro         | VNO-B1-26A |  9.17 |           95.0 | APROVADO  |
+| Fábio Queiroz Dias            | VNO-B1-26A |  7.50 |          100.0 | APROVADO  |
+| Henrique Esteves Teixeira     | VNO-B1-26A |  7.33 |           90.0 | APROVADO  |
+| Mateus Gomes Barbosa          | VNO-B1-26A |  6.83 |           88.2 | APROVADO  |
+| Tatiane Dias Queiroz          | VNO-B1-26A |  7.83 |           85.0 | APROVADO  |
++-------------------------------+------------+-------+----------------+-----------+
++-------------------------------+------------+-------------+
+| nome                          | codigo     | media_aluno |
++-------------------------------+------------+-------------+
+| Wagner Pacheco Cardoso        | BAT-B1-26A |        8.00 |
+| Gustavo Moreira Santos        | BAT-B1-26A |        7.83 |
+| Gustavo Moreira Santos        | BAT-B2-26B |        6.50 |
+| Isabela Pereira Gomes         | CAN-B1-26A |        9.67 |
+| Gabriela Siqueira Vasconcelos | CAN-B1-26A |        9.67 |
+| Felipe Pereira Machado        | CAN-B1-26A |        8.83 |
+| Gabriela Queiroz Ferreira     | CAN-IN-26B |        8.50 |
+| Leonardo Teixeira Pereira     | CAN-IN-26B |        8.00 |
+| Daniel Campos Pacheco         | PIA-B1-26A |        7.17 |
+| Alice Henriques Pereira       | PIA-B1-26A |        6.67 |
+| Rafael Nogueira Almeida       | PIA-B1-26B |        9.00 |
+| Ulisses Machado Almeida       | PIA-B1-26B |        7.00 |
+| Beatriz Lima Ribeiro          | PIA-B2-26B |        9.00 |
+| Rafael Nogueira Dias          | PIA-B2-26B |        8.00 |
+| Daniel Campos Pacheco         | PIA-B2-26B |        7.50 |
+| Valentina Lima Queiroz        | VIO-B1-26A |        9.33 |
+| Manuela Siqueira Ferreira     | VIO-B1-26A |        9.17 |
+| Natália Teixeira Oliveira     | VIO-B1-26A |        8.83 |
+| Fábio Dias Esteves            | VIO-B1-26A |        8.83 |
+| Samuel Rocha Barbosa          | VIO-B1-26A |        8.33 |
+| Larissa Henriques Ferreira    | VIO-B1-26B |        8.83 |
+| Larissa Moreira Teixeira      | VIO-B1-26B |        8.00 |
+| Mateus Pacheco Campos         | VIO-B1-26B |        7.67 |
+| Isabela Dias Nogueira         | VIO-B1-26C |        9.50 |
+| Samuel Rocha Barbosa          | VIO-B2-26B |       10.00 |
+| Larissa Dias Ferreira         | VIO-B2-26B |        9.00 |
+| Carla Esteves Ribeiro         | VNO-B1-26A |        9.17 |
+| Tatiane Dias Queiroz          | VNO-B1-26A |        7.83 |
+| Fábio Queiroz Dias            | VNO-B2-26B |        8.50 |
++-------------------------------+------------+-------------+
++-------------------------------+
+| nome                          |
++-------------------------------+
+| Alice Henriques Pereira       |
+| Beatriz Lima Ribeiro          |
+| Carla Esteves Ribeiro         |
+| Daniel Campos Pacheco         |
+| Fábio Queiroz Dias            |
+| Gabriela Queiroz Ferreira     |
+| Gabriela Siqueira Vasconcelos |
+| Gustavo Moreira Santos        |
+| Isabela Pereira Gomes         |
+| Larissa Dias Ferreira         |
+| Larissa Henriques Ferreira    |
+| Larissa Moreira Teixeira      |
+| Leonardo Teixeira Pereira     |
+| Nicolas Esteves Dias          |
+| Nicolas Pacheco Esteves       |
+| Nicolas Queiroz Esteves       |
+| Pedro Pereira Oliveira        |
+| Rafael Nogueira Dias          |
+| Rafael Oliveira Cardoso       |
+| Rafael Teixeira Campos        |
+| Samuel Rocha Barbosa          |
+| Tatiane Dias Queiroz          |
+| Valentina Lima Queiroz        |
+| Wagner Pacheco Cardoso        |
++-------------------------------+
++---------------------------+--------------------+--------------+---------------------+-------------+
+| nome                      | parcelas_em_aberto | total_devido | dias_da_mais_antiga | celular     |
++---------------------------+--------------------+--------------+---------------------+-------------+
+| Carla Esteves Ribeiro     |                  3 |       860.00 |                 192 | 61996082457 |
+| Miguel Ferreira Henriques |                  2 |       560.00 |                  39 | 61964667003 |
+| Rafael Nogueira Dias      |                  1 |       320.00 |                 161 | 61961480303 |
+| Daniel Campos Pacheco     |                  1 |       320.00 |                 100 | 61975277736 |
+| Rafael Teixeira Campos    |                  1 |       320.00 |                 100 | 61979971027 |
+| Valentina Lima Queiroz    |                  1 |       300.00 |                   8 | 61914906099 |
+| Arthur Queiroz Siqueira   |                  1 |       280.00 |                 220 | 61962542393 |
+| Wagner Rocha Siqueira     |                  1 |       280.00 |                 131 | 61963879958 |
+| Nicolas Queiroz Esteves   |                  1 |       280.00 |                 131 | 61957465280 |
+| Isabela Dias Nogueira     |                  1 |       280.00 |                   8 | 61948140861 |
++---------------------------+--------------------+--------------+---------------------+-------------+
++-------------------------------------------------------+-----------+
+| regra                                                 | violacoes |
++-------------------------------------------------------+-----------+
+| RN04 menor de idade sem responsavel                   |         0 |
+| RN26 pessoa sem papel (nem aluno nem professor)       |         0 |
+| RN27 professor nao habilitado no instrumento da turma |         0 |
+| RN28 matricula sem o pre-requisito concluido          |         0 |
+| RN30 frequencia lancada em aula de outra turma        |         0 |
++-------------------------------------------------------+-----------+
