@@ -5,7 +5,15 @@ Banco de dados de uma escola de música: pessoas (alunos e professores), instrum
 níveis com pré-requisito, turmas, matrículas com histórico de situação, aulas,
 frequência, avaliações e mensalidades.
 
-**Integrantes:** _(preencher)_
+**Integrantes:**
+
+| Nome | Matrícula |
+|---|---|
+| Gabriel Gomes Giani | UC21200531 |
+| Paulo Henrique Barreto da Rocha Dantas | UC25200677 |
+| Letícia Paolino | — |
+| Artur Henrique Caetano | UC25200566 |
+| Lucas de Oliveira Faustino | UC25200756 |
 
 **SGBD:** MySQL 8.4 · **Notação do MER:** Engenharia da Informação (pé de galinha)
 

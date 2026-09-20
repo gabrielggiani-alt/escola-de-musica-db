@@ -18,6 +18,15 @@ RAIZ = Path(__file__).resolve().parent.parent
 DOCS = RAIZ / "docs"
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 
+# Integrantes da equipe (nome completo, matrícula). Editar aqui e rodar de novo.
+INTEGRANTES = [
+    ("Gabriel Gomes Giani", "UC21200531"),
+    ("Paulo Henrique Barreto da Rocha Dantas", "UC25200677"),
+    ("Letícia Paolino", "matrícula não informada"),
+    ("Artur Henrique Caetano", "UC25200566"),
+    ("Lucas de Oliveira Faustino", "UC25200756"),
+]
+
 # ============================================================== A1 - REGRAS
 # (codigo, regra, forma de atendimento, onde)
 REGRAS = [
@@ -354,7 +363,8 @@ def html_relatorio():
   <p>UNIVERSIDADE CATÓLICA DE BRASÍLIA</p><p>Laboratório de Banco de Dados — GPE17M40083</p>
   <p>Prof. Samuel Novais Moura Júnior</p><br><br>
   <h1>Projeto Final — Etapa 1</h1><p style='font-size:14pt'>Escola de Música: projeto e construção do banco de dados</p><br><br>
-  <p><b>Integrantes:</b> ________________________________________</p>
+  <p><b>Integrantes</b></p>
+  {"".join(f"<p>{escape(n)} — {escape(m)}</p>" for n, m in INTEGRANTES)}
   <p>SGBD: MySQL 8.4 &nbsp;·&nbsp; Notação do MER: Engenharia da Informação (pé de galinha)</p><br>
   <p>Brasília, setembro de 2026</p>
 </div>

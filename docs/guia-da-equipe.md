@@ -98,6 +98,6 @@ cada decisão, e este guia serve para isso.
 - [x] Decisões de mapeamento justificadas em texto
 - [x] Dependências funcionais listadas
 - [x] Relatório em PDF paginado
-- [ ] **Preencher o nome dos integrantes** (capa do relatório e README)
-- [ ] Repositório acessível ao professor
+- [x] Nome dos integrantes na capa e no README
+- [x] Repositório público e acessível
 - [ ] **Todo mundo ler este guia**
