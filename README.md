@@ -7,13 +7,7 @@ frequência, avaliações e mensalidades.
 
 **Integrantes:**
 
-| Nome | Matrícula |
-|---|---|
-| Gabriel Gomes Giani | UC21200531 |
-| Paulo Henrique Barreto da Rocha Dantas | UC25200677 |
-| Letícia Paolino | — |
-| Artur Henrique Caetano | UC25200566 |
-| Lucas de Oliveira Faustino | UC25200756 |
+Gabriel Gomes Giani, Paulo Henrique Barreto da Rocha Dantas, Letícia Paolino, Artur Henrique Caetano e Lucas de Oliveira Faustino.
 
 **SGBD:** MySQL 8.4 · **Notação do MER:** Engenharia da Informação (pé de galinha)
 
