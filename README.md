@@ -19,7 +19,7 @@ README.md
 requirements.txt            bibliotecas Python da aplicacao
 docs/
   relatorio-etapa1.pdf      relatório da Etapa 1 (A1 a A5, implementação e uso de IA)
-  relatorio-final.pdf       RELATÓRIO CONSOLIDADO PARA ENTREGA: Etapa 2 + Etapa 1 (item B8)
+  relatorio-final.pdf       RELATÓRIO CONSOLIDADO PARA ENTREGA: capa, sumário, Etapa 1 e Etapa 2 (item B8)
   relatorio-etapa2.pdf      relatório da Etapa 2 (B1 a B8 e uso de IA)
   relatorio-etapa2.md       mesmo relatório em texto (fonte do PDF)
   guia-etapa2.md            explicação da Etapa 2 para a equipe e roteiro da demonstração
@@ -48,6 +48,7 @@ ferramentas/
   criar_usuarios_banco.py   cria os usuários do MySQL da aplicação (senhas do .env)
   experimento_concorrencia.py  roda o experimento de duas sessões (B3)
   gerar_relatorio_etapa2.py gera docs/relatorio-etapa2.pdf a partir do .md
+  montar_relatorio_final.py monta docs/relatorio-final.pdf (capa, sumário e as duas etapas)
   gerar_carga.py            gera o 02_carga.sql (semente fixa)
   gerar_mer.py              gera o mer-conceitual.drawio
   gerar_docs.py             gera os PDFs da Etapa 1
@@ -141,8 +142,7 @@ Contas **só para demonstração**; no banco ficam apenas hash e sal (PBKDF2).
 ### Regerar o relatório consolidado
 
 ```bash
-python ferramentas/gerar_relatorio_etapa2.py
-pdfunite docs/relatorio-etapa2.pdf docs/relatorio-etapa1.pdf docs/relatorio-final.pdf
+pip install reportlab pypdf
+python ferramentas/gerar_relatorio_etapa2.py    # docs/relatorio-etapa2.pdf a partir do .md
+cd ferramentas && python montar_relatorio_final.py   # capa + sumario + Etapa 1 + Etapa 2
 ```
-
-(`pdfunite` vem no pacote poppler; qualquer ferramenta que junte PDFs serve.)
