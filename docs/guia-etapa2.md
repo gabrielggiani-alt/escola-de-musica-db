@@ -104,7 +104,7 @@ dezenas de milhões de linhas.
 
 ## 4. Pendências da equipe antes da entrega
 
-- [ ] **Devolutiva da Etapa 1:** se o professor apontou correções, aplicar e registrar na seção 9 do relatório (`docs/relatorio-etapa2.md`), depois rodar `python ferramentas/gerar_relatorio_etapa2.py`.
+- [ ] **Devolutiva da Etapa 1:** se o professor apontar correções, aplicar e registrar na seção 9 do relatório (`docs/relatorio-etapa2.md`), depois rodar `python ferramentas/gerar_relatorio_etapa2.py` e o `pdfunite` do README.
 - [ ] **Declaração de uso de IA** (seção 11 do relatório): conferir se descreve o uso real da equipe.
 - [ ] **Commits por autor:** o professor usa o histórico do Git para a nota individual (seção 8 do enunciado).
 - [ ] Cada integrante rodar a aplicação e a demonstração (seção 10 do relatório) pelo menos uma vez.
