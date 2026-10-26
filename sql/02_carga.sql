@@ -9,6 +9,7 @@
 -- =====================================================================
 
 USE escola_musica;
+SET NAMES utf8mb4;  -- garante acentos corretos mesmo em terminal sem UTF-8
 
 START TRANSACTION;
 

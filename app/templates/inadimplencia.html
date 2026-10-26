@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Consulta: inadimplência no período</h1>
+<form class="filtros">
+  <label>Vencimento de <input name="venc_de" type="date" required value="{{ f.get('venc_de', '2026-01-01') }}" style="min-width:0"></label>
+  <label>até <input name="venc_ate" type="date" required value="{{ f.get('venc_ate', '2026-12-31') }}" style="min-width:0"></label>
+  <label>Total devido mínimo (R$) <input name="valor_minimo" type="number" step="0.01" value="{{ f.get('valor_minimo', '0') }}" style="min-width:0;width:90px"></label>
+  <button style="margin-top:0">Consultar</button>
+</form>
+<p class="dica">Junção de MENSALIDADE, MATRICULA e PESSOA, com SUM, COUNT e HAVING SUM(valor) &gt;= mínimo.</p>
+{% if linhas is not none %}
+<table>
+  <tr><th>aluno</th><th>e-mail</th><th>parcelas em aberto</th><th>total devido</th><th>vencimento mais antigo</th></tr>
+  {% for l in linhas %}<tr><td>{{ l.aluno }}</td><td>{{ l.email or "" }}</td><td>{{ l.parcelas_em_aberto }}</td><td>{{ l.total_devido }}</td><td>{{ l.vencimento_mais_antigo }}</td></tr>
+  {% else %}<tr><td colspan="5">Nenhum aluno inadimplente no filtro.</td></tr>{% endfor %}
+</table>
+{% endif %}
+{% endblock %}

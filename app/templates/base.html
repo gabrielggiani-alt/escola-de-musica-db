@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Escola de Música</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; background: #f4f5f7; color: #1d2433; }
+  header { background: #26314f; color: #fff; padding: 10px 20px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  header a { color: #dfe6ff; text-decoration: none; }
+  header a:hover { text-decoration: underline; }
+  header .quem { margin-left: auto; font-size: 14px; }
+  main { max-width: 1100px; margin: 20px auto; padding: 0 16px; }
+  table { border-collapse: collapse; width: 100%; background: #fff; font-size: 14px; }
+  th, td { border: 1px solid #d8dbe2; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #e9ecf3; }
+  form.campos label { display: block; margin-top: 10px; font-weight: 600; }
+  input, select { padding: 6px; min-width: 240px; font-size: 14px; }
+  button, .botao { padding: 7px 14px; margin-top: 12px; background: #26314f; color: #fff; border: 0; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; font-size: 14px; }
+  button.perigo { background: #a32626; margin-top: 0; padding: 4px 10px; }
+  .msg { padding: 10px 14px; border-radius: 4px; margin-bottom: 14px; }
+  .msg.erro { background: #fde2e2; border: 1px solid #e59a9a; }
+  .msg.ok { background: #e1f5e5; border: 1px solid #8fcf9d; }
+  .dica { color: #5a6275; font-size: 13px; }
+  .filtros { background: #fff; padding: 12px; border: 1px solid #d8dbe2; margin-bottom: 14px; }
+  .filtros label { margin-right: 12px; }
+</style>
+</head>
+<body>
+{% set rotulos = {"alunos": "Alunos", "turma": "Turmas", "instrumento": "Instrumentos", "sala": "Salas",
+  "matricula": "Matrícula", "mensalidades": "Mensalidades", "desempenho": "Consulta: desempenho",
+  "inadimplencia": "Consulta: inadimplência", "relatorio": "Relatório", "auditoria": "Auditoria"} %}
+{% if session.perfil %}
+<header>
+  <strong><a href="{{ url_for('inicio') }}">Escola de Música</a></strong>
+  {% for item in menu %}
+    {% if item in ["turma", "instrumento", "sala"] %}
+      <a href="{{ url_for('cad_lista', ent=item) }}">{{ rotulos[item] }}</a>
+    {% else %}
+      <a href="{{ url_for(item) }}">{{ rotulos[item] }}</a>
+    {% endif %}
+  {% endfor %}
+  <span class="quem">{{ session.login }} ({{ session.perfil }}) · <a href="{{ url_for('sair') }}">sair</a></span>
+</header>
+{% endif %}
+<main>
+  {% for categoria, texto in get_flashed_messages(with_categories=true) %}
+    <div class="msg {{ categoria }}">{{ texto }}</div>
+  {% endfor %}
+  {% block conteudo %}{% endblock %}
+</main>
+</body>
+</html>

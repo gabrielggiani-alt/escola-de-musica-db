@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Alunos</h1>
+<form class="filtros">
+  <label>Nome começa com <input name="busca" value="{{ busca }}"></label>
+  <button>Buscar</button> <a class="botao" href="{{ url_for('aluno_form') }}">Novo aluno</a>
+</form>
+<p class="dica">A busca usa consulta parametrizada (<code>WHERE nome LIKE %s</code>). Digitar
+<code>' OR '1'='1</code> procura um nome que começa com esse texto e não devolve nada.</p>
+<table>
+  <tr><th>id</th><th>nome</th><th>cpf</th><th>e-mail</th><th>nascimento</th><th>ingresso</th><th></th></tr>
+  {% for a in linhas %}
+  <tr><td>{{ a.id_pessoa }}</td><td>{{ a.nome }}</td><td>{{ a.cpf }}</td><td>{{ a.email or "" }}</td>
+      <td>{{ a.data_nascimento }}</td><td>{{ a.data_ingresso }}</td>
+      <td><a href="{{ url_for('aluno_form', pk=a.id_pessoa) }}">editar</a>
+      <form method="post" action="{{ url_for('aluno_excluir', pk=a.id_pessoa) }}" style="display:inline"
+            onsubmit="return confirm('Excluir este aluno?')"><button class="perigo">excluir</button></form></td></tr>
+  {% else %}<tr><td colspan="7">Nenhum aluno encontrado.</td></tr>{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,24 @@
+Nivel de isolamento: REPEATABLE-READ   innodb_lock_wait_timeout: 50 s
+
+=== CASO 3a - SEM trava (SELECT COUNT simples) ===
+[  0.07s] sessao A: START TRANSACTION
+[  0.08s] sessao A: COUNT de matriculas ativas = 7 de 8 vagas
+[  0.09s] sessao B: START TRANSACTION
+[  0.09s] sessao B: COUNT de matriculas ativas = 7 de 8 vagas
+[  0.09s] sessao A: tinha vaga -> INSERT aluno 40 e COMMIT
+[  0.39s] sessao B: tinha vaga -> INSERT aluno 23 e COMMIT
+RESULTADO: 9 matriculas ativas na turma de 8 vagas
+
+=== CASO 3b - COM trava (SELECT ... FOR UPDATE na turma) ===
+[  0.03s] sessao A: START TRANSACTION
+[  0.03s] sessao A: SELECT vagas FROM turma WHERE id_turma=7 FOR UPDATE
+[  0.03s] sessao A: obteve a trava (esperou 0.00 s)
+[  0.03s] sessao A: COUNT de matriculas ativas = 7 de 8 vagas
+[  0.56s] sessao B: START TRANSACTION
+[  0.56s] sessao B: SELECT vagas FROM turma WHERE id_turma=7 FOR UPDATE
+[  2.03s] sessao A: tinha vaga -> INSERT aluno 40 e COMMIT
+[  2.04s] sessao B: obteve a trava (esperou 1.48 s)
+[  2.04s] sessao B: COUNT de matriculas ativas = 8 de 8 vagas
+[  2.04s] sessao B: turma lotada -> ROLLBACK (aplicacao mostra 'turma sem vagas')
+RESULTADO: 8 matriculas ativas na turma de 8 vagas
+

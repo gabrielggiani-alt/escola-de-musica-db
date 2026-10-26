@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Bem-vindo, {{ session.login }}</h1>
+<p>Perfil: <strong>{{ session.perfil }}</strong>. A aplicação conecta ao MySQL com o usuário
+de banco deste perfil; o que você pode fazer é decidido pelos GRANTs do banco
+(<code>sql/04_seguranca.sql</code>), não só pelo menu.</p>
+{% endblock %}

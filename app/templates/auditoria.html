@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Auditoria <span class="dica">(últimos 100 registros, só ADMIN)</span></h1>
+<table>
+  <tr><th>id</th><th>data/hora</th><th>tabela</th><th>chave</th><th>usuário app</th><th>usuário banco</th><th>antes</th><th>depois</th></tr>
+  {% for a in linhas %}<tr><td>{{ a.id_auditoria }}</td><td>{{ a.data_hora }}</td><td>{{ a.tabela }}</td><td>{{ a.chave }}</td><td>{{ a.usuario_app or "" }}</td><td>{{ a.usuario_banco }}</td><td><code>{{ a.valores_antes }}</code></td><td><code>{{ a.valores_depois }}</code></td></tr>
+  {% else %}<tr><td colspan="8">Nenhuma alteração auditada ainda.</td></tr>{% endfor %}
+</table>
+{% endblock %}

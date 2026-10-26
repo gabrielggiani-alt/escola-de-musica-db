@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>{{ e.titulo }}</h1>
+{% if editavel %}<a class="botao" href="{{ url_for('cad_form', ent=ent) }}">Novo</a><br><br>{% endif %}
+{% if linhas %}
+<table>
+  <tr>{% for c in linhas[0].keys() %}<th>{{ c }}</th>{% endfor %}{% if editavel %}<th></th>{% endif %}</tr>
+  {% for l in linhas %}
+  <tr>
+    {% for v in l.values() %}<td>{{ "" if v is none else v }}</td>{% endfor %}
+    {% if editavel %}
+    <td>
+      <a href="{{ url_for('cad_form', ent=ent, pk=l[e.pk]) }}">editar</a>
+      <form method="post" action="{{ url_for('cad_excluir', ent=ent, pk=l[e.pk]) }}" style="display:inline"
+            onsubmit="return confirm('Excluir este registro?')"><button class="perigo">excluir</button></form>
+    </td>
+    {% endif %}
+  </tr>
+  {% endfor %}
+</table>
+{% else %}<p>Nenhum registro.</p>{% endif %}
+{% endblock %}

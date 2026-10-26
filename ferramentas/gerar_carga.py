@@ -440,7 +440,7 @@ blocos = [
     "-- verificador valido; e-mails usam o dominio reservado exemplo.com.\n"
     "-- Ordem de insercao respeita as dependencias entre tabelas.\n"
     "-- =====================================================================\n\n"
-    "USE escola_musica;\n\nSTART TRANSACTION;\n",
+    "USE escola_musica;\nSET NAMES utf8mb4;  -- garante acentos corretos mesmo em terminal sem UTF-8\n\nSTART TRANSACTION;\n",
     insert("pessoa", ["id_pessoa", "nome", "cpf", "data_nascimento", "email", "logradouro", "numero",
                       "bairro", "cidade", "uf", "cep", "data_cadastro"], pessoas, "Pessoas (professores 1-8, alunos 9+)"),
     insert("telefone", ["id_pessoa", "numero", "tipo"], telefones, "Telefones (atributo multivalorado)"),
