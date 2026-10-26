@@ -9,6 +9,8 @@ linguagem direta.
 
 ## 1. Rodar em 15 minutos
 
+**Para a apresentação, o passo a passo completo está em `docs/apresentacao.md`.**
+
 Siga a seção **"Etapa 2 — rodando a aplicação"** do `README.md`. Resumo:
 scripts `01`, `02`, `04` e `05` no MySQL → copiar `.env.example` para `.env` →
 `pip install -r requirements.txt` → `python ferramentas/criar_usuarios_banco.py`
