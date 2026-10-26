@@ -22,7 +22,8 @@ docs/
   relatorio-final.pdf       RELATÓRIO CONSOLIDADO PARA ENTREGA: capa, sumário, Etapa 1 e Etapa 2 (item B8)
   relatorio-etapa2.pdf      relatório da Etapa 2 (B1 a B8 e uso de IA)
   relatorio-etapa2.md       mesmo relatório em texto (fonte do PDF)
-  guia-etapa2.md            explicação da Etapa 2 para a equipe e roteiro da demonstração
+  apresentacao.md           PASSO A PASSO DA APRESENTAÇÃO (instalar, preparar, roteiro de 15 min)
+  guia-etapa2.md            explicação da Etapa 2 para a equipe (perguntas e respostas)
   resultados-*.txt          saída real dos scripts (consultas, otimização, transações, concorrência)
   mer-conceitual.pdf        MER exportado (A2)
   mer-conceitual.drawio     arquivo-fonte do MER (abrir no draw.io)
@@ -38,6 +39,7 @@ sql/
   05_auditoria.sql          tabela de auditoria e 2 gatilhos (B6)
   06_otimizacao.sql         3 estudos de EXPLAIN antes/depois com índices (B4)
   07_transacoes.sql         COMMIT, ROLLBACK provocado e roteiro de concorrência (B3)
+  08_demo_explain.sql       EXPLAIN antes/depois para mostrar ao vivo
 app/                        aplicação web em Flask (B1, B2)
   app.py                    telas (rotas)
   repositorio.py            TODO o SQL da aplicação, sempre parametrizado
@@ -45,6 +47,7 @@ app/                        aplicação web em Flask (B1, B2)
   erros.py                  traduz erros do MySQL em mensagens para o usuário
   templates/                páginas HTML
 ferramentas/
+  preparar_banco.py         PREPARA TUDO com um comando (scripts 01,02,04,05,06 + usuários)
   criar_usuarios_banco.py   cria os usuários do MySQL da aplicação (senhas do .env)
   experimento_concorrencia.py  roda o experimento de duas sessões (B3)
   gerar_relatorio_etapa2.py gera docs/relatorio-etapa2.pdf a partir do .md
@@ -92,6 +95,9 @@ Todos os dados são fictícios. Os CPFs são sequências aleatórias sem dígito
 verificador válido, e os e-mails usam o domínio reservado `exemplo.com`.
 
 ## Etapa 2 — rodando a aplicação
+
+> **Para a apresentação, siga `docs/apresentacao.md`**: instalação, preparo com um comando
+> (`python ferramentas/preparar_banco.py`) e o roteiro dos 15 minutos com o que clicar e digitar.
 
 Precisa de **MySQL 8** e **Python 3.10+**.
 
