@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Consulta: desempenho dos alunos por instrumento</h1>
+<form class="filtros">
+  <label>Instrumento <select name="id_instrumento" required style="min-width:0"><option value="">--</option>
+    {% for v, t in instrumentos %}<option value="{{ v }}" {% if f.get('id_instrumento') == v %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></label>
+  <label>Média mínima <input name="media_minima" type="number" step="0.1" min="0" max="10" value="{{ f.get('media_minima', '6') }}" style="min-width:0;width:70px"></label>
+  <button style="margin-top:0">Consultar</button>
+</form>
+<p class="dica">Junção de AVALIACAO, MATRICULA, vw_aluno_contato, TURMA e NIVEL, com GROUP BY e HAVING AVG(nota) &gt;= média.</p>
+{% if linhas is not none %}
+<table>
+  <tr><th>aluno</th><th>turma</th><th>nível</th><th>avaliações</th><th>média</th></tr>
+  {% for l in linhas %}<tr><td>{{ l.aluno }}</td><td>{{ l.turma }}</td><td>{{ l.nivel }}</td><td>{{ l.avaliacoes }}</td><td>{{ l.media }}</td></tr>
+  {% else %}<tr><td colspan="5">Nenhum aluno atende ao filtro.</td></tr>{% endfor %}
+</table>
+{% endif %}
+{% endblock %}

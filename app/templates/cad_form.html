@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>{{ e.titulo }} — {{ "editar" if pk else "novo" }}</h1>
+<form method="post" class="campos">
+  {% for campo, (rotulo, tipo, origem) in e.campos.items() %}
+    <label>{{ rotulo }}
+    {% if tipo == "select" %}
+      <select name="{{ campo }}" required>
+        <option value="">-- escolha --</option>
+        {% for v, txt in opc[campo] %}<option value="{{ v }}" {% if r.get(campo) == v %}selected{% endif %}>{{ txt }}</option>{% endfor %}
+      </select>
+    {% else %}
+      <input name="{{ campo }}" type="{{ tipo }}" value="{{ r.get(campo, '') }}" {% if tipo == 'time' %}step="60"{% endif %}>
+    {% endif %}
+    </label>
+  {% endfor %}
+  <p class="dica">Não há validação no navegador de propósito: as regras são conferidas pelo banco
+  (restrições CHECK/UNIQUE) e o erro volta traduzido.</p>
+  <button>Salvar</button> <a href="{{ url_for('cad_lista', ent=ent) }}">cancelar</a>
+</form>
+{% endblock %}

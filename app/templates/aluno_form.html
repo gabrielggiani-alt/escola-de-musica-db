@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Aluno — {{ "editar" if pk else "novo" }}</h1>
+<form method="post" class="campos">
+  <label>Nome <input name="nome" value="{{ r.get('nome','') }}"></label>
+  <label>CPF (11 dígitos) <input name="cpf" value="{{ r.get('cpf','') }}"></label>
+  <label>Data de nascimento <input name="data_nascimento" type="date" value="{{ r.get('data_nascimento','') }}"></label>
+  <label>E-mail <input name="email" value="{{ r.get('email','') }}"></label>
+  <label>Data de ingresso <input name="data_ingresso" type="date" value="{{ r.get('data_ingresso','') }}"></label>
+  <label>Responsável (obrigatório para menor de 18) <input name="nome_responsavel" value="{{ r.get('nome_responsavel','') }}"></label>
+  <p class="dica">Grava PESSOA e ALUNO na mesma transação.</p>
+  <button>Salvar</button> <a href="{{ url_for('alunos') }}">cancelar</a>
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Relatório consolidado</h1>
+{% if financeiro is not none %}
+<h2>Financeiro por mês <span class="dica">(visão vw_relatorio_financeiro)</span></h2>
+<table>
+  <tr><th>competência</th><th>mensalidades</th><th>previsto</th><th>recebido</th><th>em aberto</th><th>vencidas</th><th>% em aberto</th></tr>
+  {% for l in financeiro %}<tr><td>{{ l.competencia }}</td><td>{{ l.qtd_mensalidades }}</td><td>{{ l.valor_previsto }}</td><td>{{ l.valor_recebido }}</td><td>{{ l.valor_em_aberto }}</td><td>{{ l.qtd_vencidas }}</td><td>{{ l.pct_em_aberto }}</td></tr>{% endfor %}
+</table>
+{% endif %}
+{% if ocupacao is not none %}
+<h2>Ocupação das turmas <span class="dica">(visão vw_ocupacao_turma)</span></h2>
+<table>
+  <tr><th>turma</th><th>instrumento</th><th>nível</th><th>professor</th><th>início</th><th>fim</th><th>vagas</th><th>ocupadas</th><th>livres</th></tr>
+  {% for l in ocupacao %}<tr><td>{{ l.codigo }}</td><td>{{ l.instrumento }}</td><td>{{ l.nivel }}</td><td>{{ l.professor }}</td><td>{{ l.data_inicio }}</td><td>{{ l.data_fim }}</td><td>{{ l.vagas }}</td><td>{{ l.ocupadas }}</td><td>{{ l.livres }}</td></tr>{% endfor %}
+</table>
+{% endif %}
+{% endblock %}

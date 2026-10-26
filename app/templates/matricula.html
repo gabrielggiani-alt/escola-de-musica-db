@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Matricular aluno</h1>
+<p>Operação transacional central: grava <strong>MATRICULA</strong>, <strong>HISTORICO_SITUACAO</strong>
+e a primeira <strong>MENSALIDADE</strong> numa única transação, com trava na turma
+(<code>SELECT ... FOR UPDATE</code>) para não vender a mesma vaga duas vezes.</p>
+<form method="post" class="campos">
+  <label>Aluno <select name="id_aluno" required><option value="">-- escolha --</option>
+    {% for v, t in alunos %}<option value="{{ v }}" {% if f.get('id_aluno') == v %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></label>
+  <label>Turma <select name="id_turma" required><option value="">-- escolha --</option>
+    {% for v, t in turmas %}<option value="{{ v }}" {% if f.get('id_turma') == v %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></label>
+  <label>Valor da mensalidade (R$) <input name="valor" type="number" step="0.01" value="{{ f.get('valor', '320.00') }}"></label>
+  <p class="dica">Para a demonstração de falha: valor <strong>0</strong> viola <code>ck_mensalidade_valor</code>
+  no terceiro INSERT. A matrícula e o histórico, já inseridos, são desfeitos pelo ROLLBACK.</p>
+  <button>Matricular</button>
+</form>
+{% endblock %}

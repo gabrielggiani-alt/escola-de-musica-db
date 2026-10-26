@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Mensalidades em aberto</h1>
+<p class="dica">Registrar um pagamento dispara o gatilho <code>trg_mensalidade_au</code>, que grava
+autor, data e valores antes/depois na tabela AUDITORIA.</p>
+<table>
+  <tr><th>id</th><th>aluno</th><th>turma</th><th>competência</th><th>valor</th><th>vencimento</th><th>baixa</th></tr>
+  {% for m in linhas %}
+  <tr><td>{{ m.id_mensalidade }}</td><td>{{ m.aluno }}</td><td>{{ m.turma }}</td><td>{{ m.competencia }}</td>
+      <td>{{ m.valor }}</td><td>{{ m.data_vencimento }}</td>
+      <td><form method="post" style="display:inline">
+        <input type="hidden" name="id_mensalidade" value="{{ m.id_mensalidade }}">
+        <select name="forma" style="min-width:0">{% for fp in ["PIX","CARTAO","BOLETO","DINHEIRO"] %}<option>{{ fp }}</option>{% endfor %}</select>
+        <button style="margin-top:0">pago</button></form></td></tr>
+  {% else %}<tr><td colspan="7">Nenhuma mensalidade em aberto.</td></tr>{% endfor %}
+</table>
+{% endblock %}
