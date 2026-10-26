@@ -29,12 +29,13 @@ ETAPA1, ETAPA2 = DOCS / "relatorio-etapa1.pdf", DOCS / "relatorio-etapa2.pdf"
 DESTINO = DOCS / "relatorio-final.pdf"
 
 GRUPO = "Group 8"
+# mesmos dados da capa da Etapa 1
 INTEGRANTES = [
-    "Gabriel Gomes Giani",
-    "Paulo Henrique Barreto da Rocha Dantas",
-    "Letícia Paolino",
-    "Artur Henrique Caetano",
-    "Lucas de Oliveira Faustino",
+    "Gabriel Gomes Giani — UC21200531",
+    "Paulo Henrique Barreto da Rocha Dantas — UC25200677",
+    "Letícia Paolino — matrícula não informada",
+    "Artur Henrique Caetano — UC25200566",
+    "Lucas de Oliveira Faustino — UC25200756",
 ]
 
 # (titulo, pagina dentro do PDF da propria etapa). Se um relatorio mudar de
@@ -63,6 +64,9 @@ SECOES_ETAPA2 = [
     ("11. Declaração de uso de inteligência artificial", 10),
 ]
 PAGINAS_INICIAIS = 2  # capa + sumario
+# A pagina 1 do relatorio da Etapa 1 e a capa dela; a capa geral ja traz os
+# mesmos dados, entao ela e omitida no consolidado.
+PULAR_ETAPA1 = 1
 
 
 def capa_e_sumario(ini1, ini2):
@@ -114,7 +118,7 @@ def capa_e_sumario(ini1, ini2):
 
     linha("Parte I — Etapa 1: projeto e construção do banco", ini1, NEGRITO)
     for t, p in SECOES_ETAPA1:
-        linha(t, ini1 + p - 1, recuo=0.6 * cm)
+        linha(t, ini1 + p - 1 - PULAR_ETAPA1, recuo=0.6 * cm)
     y -= 0.4 * cm
     linha("Parte II — Etapa 2: operação, interface e desempenho", ini2, NEGRITO)
     for t, p in SECOES_ETAPA2:
@@ -139,8 +143,9 @@ def carimbo(n, total):
 def main():
     e1, e2 = PdfReader(ETAPA1), PdfReader(ETAPA2)
     ini1 = PAGINAS_INICIAIS + 1
-    ini2 = ini1 + len(e1.pages)
-    paginas = list(capa_e_sumario(ini1, ini2).pages) + list(e1.pages) + list(e2.pages)
+    paginas_e1 = list(e1.pages)[PULAR_ETAPA1:]
+    ini2 = ini1 + len(paginas_e1)
+    paginas = list(capa_e_sumario(ini1, ini2).pages) + paginas_e1 + list(e2.pages)
     total = len(paginas)
     saida = PdfWriter()
     for n, pagina in enumerate(paginas, start=1):
