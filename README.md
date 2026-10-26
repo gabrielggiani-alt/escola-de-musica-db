@@ -19,6 +19,7 @@ README.md
 requirements.txt            bibliotecas Python da aplicacao
 docs/
   relatorio-etapa1.pdf      relatório da Etapa 1 (A1 a A5, implementação e uso de IA)
+  relatorio-final.pdf       RELATÓRIO CONSOLIDADO PARA ENTREGA: Etapa 2 + Etapa 1 (item B8)
   relatorio-etapa2.pdf      relatório da Etapa 2 (B1 a B8 e uso de IA)
   relatorio-etapa2.md       mesmo relatório em texto (fonte do PDF)
   guia-etapa2.md            explicação da Etapa 2 para a equipe e roteiro da demonstração
@@ -136,3 +137,12 @@ Contas **só para demonstração**; no banco ficam apenas hash e sal (PBKDF2).
 | `admin` | `Admin@2026` | ADMIN — tudo, inclusive a tela de Auditoria |
 | `secretaria` | `Secretaria@2026` | SECRETARIA — alunos, turmas, matrícula, mensalidades |
 | `prof.julia` | `Professor@2026` | PROFESSOR — turmas, consulta de desempenho; sem CPF |
+
+### Regerar o relatório consolidado
+
+```bash
+python ferramentas/gerar_relatorio_etapa2.py
+pdfunite docs/relatorio-etapa2.pdf docs/relatorio-etapa1.pdf docs/relatorio-final.pdf
+```
+
+(`pdfunite` vem no pacote poppler; qualquer ferramenta que junte PDFs serve.)

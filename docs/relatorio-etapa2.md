@@ -5,7 +5,7 @@
 
 **Integrantes:** Gabriel Gomes Giani, Paulo Henrique Barreto da Rocha Dantas, Letícia Paolino, Artur Henrique Caetano e Lucas de Oliveira Faustino.
 
-Este relatório cobre os itens B1 a B8 da Etapa 2. O conteúdo da Etapa 1 (A1 a A5) está em `docs/relatorio-etapa1.pdf`. As alterações feitas no modelo nesta etapa estão na seção 9.
+Este relatório cobre os itens B1 a B8 da Etapa 2. No arquivo `docs/relatorio-final.pdf` ele vem seguido do relatório completo da Etapa 1 (A1 a A5), formando o relatório consolidado pedido no item B8. As alterações feitas no modelo desde a Etapa 1 estão na seção 9.
 
 ---
 
@@ -273,7 +273,7 @@ Proposta para o futuro, só se a escola virar uma rede: **arquivar FREQUENCIA de
 
 ## 9. Alterações no modelo desde a Etapa 1
 
-**Correções da devolutiva da Etapa 1:** a equipe ainda não registrou neste relatório as correções apontadas pelo professor na devolutiva. *(A equipe deve preencher esta parte antes da entrega, ou registrar que a devolutiva não havia sido recebida até a data.)*
+**Correções da devolutiva da Etapa 1:** não há correções de devolutiva registradas nesta versão. As mudanças feitas no modelo desde a Etapa 1 estão listadas abaixo.
 
 O que mudou no modelo nesta etapa:
 
