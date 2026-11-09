@@ -58,6 +58,8 @@ def main():
     senha_root = os.getenv("DB_ROOT_PASSWORD")
     if senha_root is None:
         senha_root = getpass.getpass("Senha do root do MySQL (Enter se vazia): ")
+    # guarda para criar_usuarios_banco.py nao perguntar de novo
+    os.environ["DB_ROOT_PASSWORD"] = senha_root
     try:
         con = pymysql.connect(host=os.getenv("DB_HOST", "localhost"),
                               port=int(os.getenv("DB_PORT", "3306")),

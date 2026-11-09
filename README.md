@@ -101,6 +101,9 @@ verificador válido, e os e-mails usam o domínio reservado `exemplo.com`.
 
 ## Etapa 2 — rodando a aplicação
 
+**Jeito mais fácil (Windows):** com MySQL 8 e Python instalados, dois cliques em `INICIAR.bat`.
+Ele instala as bibliotecas, cria o banco do zero, pede a senha do root do MySQL e abre a aplicação.
+
 > **Para a apresentação, siga `docs/apresentacao.md`**: instalação, preparo com um comando
 > (`python ferramentas/preparar_banco.py`) e o roteiro dos 15 minutos com o que clicar e digitar.
 
