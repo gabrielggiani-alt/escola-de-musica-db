@@ -81,7 +81,15 @@ def tabela(linhas, largura):
     dados = [[Paragraph(inline(c), EST["celh" if i == 0 else "cel"]) for c in linha]
              for i, linha in enumerate(celulas)]
     n = len(celulas[0])
-    t = Table(dados, colWidths=[largura / n] * n, repeatRows=1)
+    # largura de cada coluna proporcional ao seu texto mais longo (com piso e teto),
+    # para uma coluna "#" não ocupar o mesmo espaço que uma de descrição
+    def peso(i):
+        textos = [linha[i] for linha in celulas if i < len(linha)]
+        maior_texto = max(len(t) for t in textos)
+        maior_palavra = max((len(p) for t in textos for p in t.split()), default=1)
+        return min(max(maior_texto, maior_palavra * 1.6, 4), 60)
+    pesos = [peso(i) for i in range(n)]
+    t = Table(dados, colWidths=[largura * p / sum(pesos) for p in pesos], repeatRows=1)
     t.setStyle(TableStyle([
         ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#c5c9d3")),
         ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#e6e9f1")),

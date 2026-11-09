@@ -26,6 +26,8 @@ docs/
   guia-etapa2.md            explicação da Etapa 2 para a equipe (perguntas e respostas)
   roteiro-integrantes.md    o que cada um dos 4 apresentadores fala e mostra (também em .pdf)
   apresentacao-slides.pdf   os slides da apresentação da Etapa 2
+  guia-gabriel.pdf          parte 1 e operação do computador na apresentação
+  parte2/3/4-*.pdf          material individual de Paulo, Letícia e Lucas
   resultados-*.txt          saída real dos scripts (consultas, otimização, transações, concorrência)
   mer-conceitual.pdf        MER exportado (A2)
   mer-conceitual.drawio     arquivo-fonte do MER (abrir no draw.io)
