@@ -41,6 +41,7 @@ sql/
   06_otimizacao.sql         3 estudos de EXPLAIN antes/depois com índices (B4)
   07_transacoes.sql         COMMIT, ROLLBACK provocado e roteiro de concorrência (B3)
   08_demo_explain.sql       EXPLAIN antes/depois para mostrar ao vivo
+  09_demo_conferencia.sql   mostra o banco íntegro depois da matrícula com sucesso e com falha
 app/                        aplicação web em Flask (B1, B2)
   app.py                    telas (rotas)
   repositorio.py            TODO o SQL da aplicação, sempre parametrizado
