@@ -122,8 +122,13 @@ def converter(md, largura):
             while i < len(linhas) and re.match(r"^\s*(- |\d+\. )", linhas[i]):
                 texto = re.sub(r"^\s*(- |\d+\. )", "", linhas[i])
                 recuo = len(linhas[i]) - len(linhas[i].lstrip())
-                itens.append(ListItem(Paragraph(inline(texto), EST["p"]), leftIndent=12 + recuo * 4))
                 i += 1
+                # linhas recuadas logo abaixo continuam o mesmo item
+                while (i < len(linhas) and linhas[i].startswith("  ")
+                       and not re.match(r"^\s*(- |\d+\. )", linhas[i])):
+                    texto += " " + linhas[i].strip()
+                    i += 1
+                itens.append(ListItem(Paragraph(inline(texto), EST["p"]), leftIndent=12 + recuo * 4))
             historia.append(ListFlowable(itens, bulletType="1" if numerada else "bullet",
                                          bulletFontName=FONTE, bulletFontSize=8, leftIndent=14))
             continue

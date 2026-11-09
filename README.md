@@ -24,6 +24,7 @@ docs/
   relatorio-etapa2.md       mesmo relatório em texto (fonte do PDF)
   apresentacao.md           PASSO A PASSO DA APRESENTAÇÃO (instalar, preparar, roteiro de 15 min)
   guia-etapa2.md            explicação da Etapa 2 para a equipe (perguntas e respostas)
+  roteiro-integrantes.md    o que cada um dos 4 apresentadores fala e mostra (também em .pdf)
   resultados-*.txt          saída real dos scripts (consultas, otimização, transações, concorrência)
   mer-conceitual.pdf        MER exportado (A2)
   mer-conceitual.drawio     arquivo-fonte do MER (abrir no draw.io)
