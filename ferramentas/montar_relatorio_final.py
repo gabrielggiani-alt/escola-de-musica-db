@@ -34,7 +34,6 @@ INTEGRANTES = [
     "Gabriel Gomes Giani — UC21200531",
     "Paulo Henrique Barreto da Rocha Dantas — UC25200677",
     "Letícia Paolino — matrícula não informada",
-    "Artur Henrique Caetano — UC25200566",
     "Lucas de Oliveira Faustino — UC25200756",
 ]
 

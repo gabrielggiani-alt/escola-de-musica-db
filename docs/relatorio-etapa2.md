@@ -3,7 +3,7 @@
 **Projeto Final de Laboratório de Banco de Dados — UCB 2026/2 — Prof. Samuel Novais**
 **Tema:** Escola de Música · **SGBD:** MySQL 8 · **Aplicação:** Python 3 + Flask (web)
 
-**Integrantes:** Gabriel Gomes Giani, Paulo Henrique Barreto da Rocha Dantas, Letícia Paolino, Artur Henrique Caetano e Lucas de Oliveira Faustino.
+**Integrantes:** Gabriel Gomes Giani, Paulo Henrique Barreto da Rocha Dantas, Letícia Paolino e Lucas de Oliveira Faustino.
 
 Este relatório cobre os itens B1 a B8 da Etapa 2. No arquivo `docs/relatorio-final.pdf` ele vem depois do relatório completo da Etapa 1 (A1 a A5), formando o relatório consolidado pedido no item B8. As alterações feitas no modelo desde a Etapa 1 estão na seção 9.
 

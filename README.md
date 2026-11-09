@@ -7,7 +7,7 @@ frequência, avaliações e mensalidades.
 
 **Integrantes:**
 
-Gabriel Gomes Giani, Paulo Henrique Barreto da Rocha Dantas, Letícia Paolino, Artur Henrique Caetano e Lucas de Oliveira Faustino.
+Gabriel Gomes Giani, Paulo Henrique Barreto da Rocha Dantas, Letícia Paolino e Lucas de Oliveira Faustino.
 
 **SGBD:** MySQL 8.4 · **Notação do MER:** Engenharia da Informação (pé de galinha)
 
