@@ -406,10 +406,11 @@ table.lg td { padding: 24px 20px; }
 
 .rel { position: relative; }
 /* marcador de fala: o numero do slide = o numero na fala (pagina de treino e guia) */
-.cue { position: absolute; left: -68px; top: 6px; width: 48px; height: 48px; border-radius: 50%; background: var(--amber); color: #0A2A31;
-    display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 700; font-size: 28px; line-height: 1; }
-.cue.in { position: static; display: inline-flex; margin-right: 18px; vertical-align: middle; }
-.h2cue { top: 14px; }
+.cue { position: absolute; left: -58px; top: 6px; width: 34px; height: 34px; border-radius: 50%; background: transparent;
+    border: 2px solid rgba(159,184,181,.55); color: var(--chalk-dim); opacity: .85;
+    display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 500; font-size: 19px; line-height: 1; font-style: normal; }
+.cue.in { position: static; display: inline-flex; margin-right: 16px; vertical-align: middle; font-style: normal; }
+.h2cue { top: 24px; }
 .tip { font-family: var(--font-mono); font-size: 24px; letter-spacing: 1px; color: var(--chalk-dim); margin-bottom: 6px; }
 .tip b { color: var(--amber); font-weight: 600; }
 
@@ -443,8 +444,8 @@ body.editing [contenteditable] { outline: 1px dashed rgba(255,178,30,.7); outlin
 <section class="slide cover active" aria-label="Capa">
   <div class="paper"></div><div class="frame double"></div>
   <div class="title-wrap">
-    <p class="kicker reveal rel" style="--d:.1"><i class="cue" style="top:-10px">1</i>Etapa 2 · projeto final</p>
-    <h1 class="reveal rel" style="--d:.25"><i class="cue" style="top:26px">2</i>Escola<br>de <em>Música</em></h1>
+    <p class="kicker reveal rel" style="--d:.1"><i class="cue" style="top:0">1</i>Etapa 2 · projeto final</p>
+    <h1 class="reveal rel" style="--d:.25"><i class="cue" style="top:44px">2</i>Escola<br>de <em>Música</em></h1>
     <p class="sub reveal" style="--d:.5">operação, interface e desempenho</p>
   </div>
   <!-- diagrama ER na notação pé de galinha: ALUNO 1—N MATRÍCULA N—1 TURMA -->
@@ -468,7 +469,7 @@ body.editing [contenteditable] { outline: 1px dashed rgba(255,178,30,.7); outlin
       <text x="220" y="468">id_matricula · PK</text><text x="220" y="504">situacao</text>
     </g>
   </svg>
-  <div class="block reveal" style="--d:.7"><i class="cue" style="top:22px">3</i>
+  <div class="block reveal" style="--d:.7"><i class="cue" style="top:42px">3</i>
     <div><small>Disciplina</small><span>Laboratório de Banco de Dados</span></div>
     <div><small>Grupo</small><span>Group 8 · UCB 2026/2</span></div>
     <div><small>Professor</small><span>Samuel Novais</span></div>
@@ -481,16 +482,13 @@ body.editing [contenteditable] { outline: 1px dashed rgba(255,178,30,.7); outlin
   <p class="eyebrow">Roteiro · 15 minutos</p>
   <div class="content">
     <h2 class="reveal rel"><i class="cue h2cue">1</i>Quatro partes, cada uma termina com o sistema <em>rodando</em></h2>
-    <div class="ruler reveal rel" style="--d:.15"><i class="cue" style="top:8px">2</i>
-      <div style="flex:3">3 min</div><div style="flex:4">4 min</div><div style="flex:4">4 min</div><div style="flex:3">3 min</div><div style="flex:1">1 min</div>
-    </div>
-    <div class="cards4 reveal rel" style="--d:.3"><i class="cue">3</i>
+    <div class="cards4 reveal rel" style="--d:.15"><i class="cue">2</i>
       <div class="ent"><div class="ent-h">Parte <span>1</span></div><div class="ent-b"><span class="t">Contexto e cadastro</span>Domínio, o que mudou e o CRUD de um aluno<span class="who">Gabriel</span></div></div>
       <div class="ent"><div class="ent-h">Parte <span>2</span></div><div class="ent-b"><span class="t">Consultas e restrições</span>Consulta parametrizada, relatório por visão e erro tratado<span class="who">Paulo</span></div></div>
       <div class="ent"><div class="ent-h">Parte <span>3</span></div><div class="ent-b"><span class="t">Transação</span>Sucesso, falha provocada e o banco íntegro nos dois casos<span class="who">Letícia</span></div></div>
       <div class="ent"><div class="ent-h">Parte <span>4</span></div><div class="ent-b"><span class="t">Desempenho e acesso</span>EXPLAIN antes e depois do índice; o mesmo sistema em dois perfis<span class="who">Lucas</span></div></div>
     </div>
-    <p class="mono-note reveal" style="--d:.45">A última marca da régua é a <b>arguição</b>: perguntas do professor aos integrantes sorteados.</p>
+    <p class="mono-note reveal rel" style="--d:.3"><i class="cue" style="top:2px">3</i>No final vem a <b>arguição</b>: perguntas do professor aos integrantes sorteados.</p>
   </div>
   <p class="sheet">02 / 18</p>
 </section>
@@ -501,7 +499,7 @@ body.editing [contenteditable] { outline: 1px dashed rgba(255,178,30,.7); outlin
   <p class="eyebrow">O domínio</p>
   <div class="content" style="gap:44px">
     <h2 class="reveal rel"><i class="cue h2cue">1</i>Do instrumento à <em>mensalidade</em>, em uma linha</h2>
-    <div class="flow reveal rel" style="--d:.15"><i class="cue" style="top:12px">2</i>
+    <div class="flow reveal rel" style="--d:.15"><i class="cue" style="top:33px">2</i>
       <div class="node">Instrumento</div><i class="arr"></i><div class="node">Nível</div><i class="arr"></i><div class="node">Turma</div><i class="arr"></i><div class="node hot">Matrícula</div><i class="arr"></i><div class="node">Aula · Nota · Mensalidade</div>
     </div>
     <table class="lg reveal rel" style="--d:.3"><caption style="caption-side:top;text-align:left;height:0;padding:0"><i class="cue" style="top:6px">3</i></caption>
@@ -522,14 +520,14 @@ body.editing [contenteditable] { outline: 1px dashed rgba(255,178,30,.7); outlin
   <div class="content">
     <h2 class="reveal rel"><i class="cue h2cue">1</i>Cada perfil entra no banco com um <em>usuário próprio</em></h2>
     <div class="two">
-      <div class="stats reveal rel" style="--d:.15;gap:10px"><i class="cue" style="top:4px">2</i><p class="tip">Para isso: <b>aponte, não leia</b> os detalhes</p>
+      <div class="stats reveal rel" style="--d:.15;gap:10px"><i class="cue" style="top:-1px">2</i><p class="tip">O que foi criado para isso</p>
         <div class="stat"><span class="big">2</span><span class="t">tabelas novas<span class="s">USUARIO_APP (senha em hash) e AUDITORIA</span></span></div>
         <div class="stat"><span class="big">3</span><span class="t">visões<span class="s">contato do aluno, ocupação de turma, financeiro</span></span></div>
         <div class="stat"><span class="big">4</span><span class="t">papéis no MySQL<span class="s">com GRANT e REVOKE</span></span></div>
         <div class="stat"><span class="big">3</span><span class="t">índices novos<span class="s">medidos com EXPLAIN</span></span></div>
         <div class="stat"><span class="big">2</span><span class="t">gatilhos de auditoria<span class="s">mensalidade e matrícula</span></span></div>
       </div>
-      <div class="arch reveal rel" style="--d:.3"><i class="cue" style="top:20px">3</i>
+      <div class="arch reveal rel" style="--d:.3"><i class="cue" style="top:26px">3</i>
         <div class="abox">Navegador</div><div class="vl"></div>
         <div class="abox">Aplicação Flask (Python)</div><div class="vl"></div>
         <div class="users"><div class="abox">app_login</div><div class="abox">app_admin</div><div class="abox">app_secretaria</div><div class="abox">app_professor</div></div><div class="vl"></div>
