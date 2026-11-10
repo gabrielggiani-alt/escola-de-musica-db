@@ -22,12 +22,8 @@ docs/
   relatorio-final.pdf       RELATÓRIO CONSOLIDADO PARA ENTREGA: capa, sumário, Etapa 1 e Etapa 2 (item B8)
   relatorio-etapa2.pdf      relatório da Etapa 2 (B1 a B8 e uso de IA)
   relatorio-etapa2.md       mesmo relatório em texto (fonte do PDF)
-  apresentacao.md           PASSO A PASSO DA APRESENTAÇÃO (instalar, preparar, roteiro de 15 min)
-  guia-etapa2.md            explicação da Etapa 2 para a equipe (perguntas e respostas)
-  roteiro-integrantes.md    o que cada um dos 4 apresentadores fala e mostra (também em .pdf)
-  apresentacao-slides.pdf   os slides da apresentação da Etapa 2
-  guia-gabriel.pdf          parte 1 e operação do computador na apresentação
-  parte2/3/4-*.pdf          material individual de Paulo, Letícia e Lucas
+  Apresentacao-Etapa2.html  os slides da apresentação da Etapa 2 (abrir no navegador; F11 = tela cheia)
+  Apresentacao-Etapa2.pdf   os mesmos slides em PDF
   resultados-*.txt          saída real dos scripts (consultas, otimização, transações, concorrência)
   mer-conceitual.pdf        MER exportado (A2)
   mer-conceitual.drawio     arquivo-fonte do MER (abrir no draw.io)
@@ -104,8 +100,8 @@ verificador válido, e os e-mails usam o domínio reservado `exemplo.com`.
 **Jeito mais fácil (Windows):** com MySQL 8 e Python instalados, dois cliques em `INICIAR.bat`.
 Ele instala as bibliotecas, cria o banco do zero, pede a senha do root do MySQL e abre a aplicação.
 
-> **Para a apresentação, siga `docs/apresentacao.md`**: instalação, preparo com um comando
-> (`python ferramentas/preparar_banco.py`) e o roteiro dos 15 minutos com o que clicar e digitar.
+> **Para a apresentação:** abra `docs/Apresentacao-Etapa2.html` e rode o `INICIAR.bat`
+> (ou `python ferramentas/preparar_banco.py` para só preparar o banco).
 
 Precisa de **MySQL 8** e **Python 3.10+**.
 
