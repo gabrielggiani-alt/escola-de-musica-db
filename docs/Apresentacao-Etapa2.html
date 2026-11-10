@@ -404,6 +404,15 @@ table.lg td { padding: 24px 20px; }
 .draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; transition: stroke-dashoffset 2s var(--ease) .5s; }
 .slide.visible .draw { stroke-dashoffset: 0; }
 
+.rel { position: relative; }
+/* marcador de fala: o numero do slide = o numero na fala (pagina de treino e guia) */
+.cue { position: absolute; left: -68px; top: 6px; width: 48px; height: 48px; border-radius: 50%; background: var(--amber); color: #0A2A31;
+    display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 700; font-size: 28px; line-height: 1; }
+.cue.in { position: static; display: inline-flex; margin-right: 18px; vertical-align: middle; }
+.h2cue { top: 14px; }
+.tip { font-family: var(--font-mono); font-size: 24px; letter-spacing: 1px; color: var(--chalk-dim); margin-bottom: 6px; }
+.tip b { color: var(--amber); font-weight: 600; }
+
 /* ===========================================================
    CONTROLES FORA DO PALCO (não aparecem nos slides nem no PDF)
    =========================================================== */
@@ -434,8 +443,8 @@ body.editing [contenteditable] { outline: 1px dashed rgba(255,178,30,.7); outlin
 <section class="slide cover active" aria-label="Capa">
   <div class="paper"></div><div class="frame double"></div>
   <div class="title-wrap">
-    <p class="kicker reveal" style="--d:.1">Etapa 2 · projeto final</p>
-    <h1 class="reveal" style="--d:.25">Escola<br>de <em>Música</em></h1>
+    <p class="kicker reveal rel" style="--d:.1"><i class="cue" style="top:-10px">1</i>Etapa 2 · projeto final</p>
+    <h1 class="reveal rel" style="--d:.25"><i class="cue" style="top:26px">2</i>Escola<br>de <em>Música</em></h1>
     <p class="sub reveal" style="--d:.5">operação, interface e desempenho</p>
   </div>
   <!-- diagrama ER na notação pé de galinha: ALUNO 1—N MATRÍCULA N—1 TURMA -->
@@ -459,7 +468,7 @@ body.editing [contenteditable] { outline: 1px dashed rgba(255,178,30,.7); outlin
       <text x="220" y="468">id_matricula · PK</text><text x="220" y="504">situacao</text>
     </g>
   </svg>
-  <div class="block reveal" style="--d:.7">
+  <div class="block reveal" style="--d:.7"><i class="cue" style="top:22px">3</i>
     <div><small>Disciplina</small><span>Laboratório de Banco de Dados</span></div>
     <div><small>Grupo</small><span>Group 8 · UCB 2026/2</span></div>
     <div><small>Professor</small><span>Samuel Novais</span></div>
@@ -471,11 +480,11 @@ body.editing [contenteditable] { outline: 1px dashed rgba(255,178,30,.7); outlin
   <div class="paper"></div><div class="frame"></div>
   <p class="eyebrow">Roteiro · 15 minutos</p>
   <div class="content">
-    <h2 class="reveal">Quatro partes, cada uma termina com o sistema <em>rodando</em></h2>
-    <div class="ruler reveal" style="--d:.15">
+    <h2 class="reveal rel"><i class="cue h2cue">1</i>Quatro partes, cada uma termina com o sistema <em>rodando</em></h2>
+    <div class="ruler reveal rel" style="--d:.15"><i class="cue" style="top:8px">2</i>
       <div style="flex:3">3 min</div><div style="flex:4">4 min</div><div style="flex:4">4 min</div><div style="flex:3">3 min</div><div style="flex:1">1 min</div>
     </div>
-    <div class="cards4 reveal" style="--d:.3">
+    <div class="cards4 reveal rel" style="--d:.3"><i class="cue">3</i>
       <div class="ent"><div class="ent-h">Parte <span>1</span></div><div class="ent-b"><span class="t">Contexto e cadastro</span>Domínio, o que mudou e o CRUD de um aluno<span class="who">Gabriel</span></div></div>
       <div class="ent"><div class="ent-h">Parte <span>2</span></div><div class="ent-b"><span class="t">Consultas e restrições</span>Consulta parametrizada, relatório por visão e erro tratado<span class="who">Paulo</span></div></div>
       <div class="ent"><div class="ent-h">Parte <span>3</span></div><div class="ent-b"><span class="t">Transação</span>Sucesso, falha provocada e o banco íntegro nos dois casos<span class="who">Letícia</span></div></div>
@@ -491,11 +500,11 @@ body.editing [contenteditable] { outline: 1px dashed rgba(255,178,30,.7); outlin
   <div class="paper"></div><div class="frame"></div>
   <p class="eyebrow">O domínio</p>
   <div class="content" style="gap:44px">
-    <h2 class="reveal">Do instrumento à <em>mensalidade</em>, em uma linha</h2>
-    <div class="flow reveal" style="--d:.15">
+    <h2 class="reveal rel"><i class="cue h2cue">1</i>Do instrumento à <em>mensalidade</em>, em uma linha</h2>
+    <div class="flow reveal rel" style="--d:.15"><i class="cue" style="top:12px">2</i>
       <div class="node">Instrumento</div><i class="arr"></i><div class="node">Nível</div><i class="arr"></i><div class="node">Turma</div><i class="arr"></i><div class="node hot">Matrícula</div><i class="arr"></i><div class="node">Aula · Nota · Mensalidade</div>
     </div>
-    <table class="lg reveal" style="--d:.3">
+    <table class="lg reveal rel" style="--d:.3"><caption style="caption-side:top;text-align:left;height:0;padding:0"><i class="cue" style="top:6px">3</i></caption>
       <tr><th style="width:36%">Requisito do enunciado</th><th>Onde está no modelo</th></tr>
       <tr><td class="k">Especialização</td><td>PESSOA → ALUNO / PROFESSOR (total e sobreposta)</td></tr>
       <tr><td class="k">Autorrelacionamento</td><td>NÍVEL → NÍVEL (pré-requisito)</td></tr>
@@ -511,16 +520,16 @@ body.editing [contenteditable] { outline: 1px dashed rgba(255,178,30,.7); outlin
   <div class="paper"></div><div class="frame"></div>
   <p class="eyebrow">Desde a Etapa 1</p>
   <div class="content">
-    <h2 class="reveal">Cada perfil entra no banco com um <em>usuário próprio</em></h2>
+    <h2 class="reveal rel"><i class="cue h2cue">1</i>Cada perfil entra no banco com um <em>usuário próprio</em></h2>
     <div class="two">
-      <div class="stats reveal" style="--d:.15">
+      <div class="stats reveal rel" style="--d:.15;gap:10px"><i class="cue" style="top:4px">2</i><p class="tip">Para isso: <b>aponte, não leia</b> os detalhes</p>
         <div class="stat"><span class="big">2</span><span class="t">tabelas novas<span class="s">USUARIO_APP (senha em hash) e AUDITORIA</span></span></div>
         <div class="stat"><span class="big">3</span><span class="t">visões<span class="s">contato do aluno, ocupação de turma, financeiro</span></span></div>
         <div class="stat"><span class="big">4</span><span class="t">papéis no MySQL<span class="s">com GRANT e REVOKE</span></span></div>
         <div class="stat"><span class="big">3</span><span class="t">índices novos<span class="s">medidos com EXPLAIN</span></span></div>
         <div class="stat"><span class="big">2</span><span class="t">gatilhos de auditoria<span class="s">mensalidade e matrícula</span></span></div>
       </div>
-      <div class="arch reveal" style="--d:.3">
+      <div class="arch reveal rel" style="--d:.3"><i class="cue" style="top:20px">3</i>
         <div class="abox">Navegador</div><div class="vl"></div>
         <div class="abox">Aplicação Flask (Python)</div><div class="vl"></div>
         <div class="users"><div class="abox">app_login</div><div class="abox">app_admin</div><div class="abox">app_secretaria</div><div class="abox">app_professor</div></div><div class="vl"></div>
@@ -543,7 +552,7 @@ body.editing [contenteditable] { outline: 1px dashed rgba(255,178,30,.7); outlin
       <div class="step"><span class="n">2</span><span class="do">Alunos → Novo aluno: <b>Maria Teste Apresentação</b> <small>CPF 11122233344</small></span><span class="see">“Aluno salvo.”</span></div>
       <div class="step"><span class="n">3</span><span class="do">Buscar “Maria” → editar o e-mail → Salvar</span><span class="see">“Aluno salvo.”</span></div>
     </div>
-    <p class="note reveal" style="--d:.3">PESSOA e ALUNO são gravados na <b>mesma transação</b>.</p>
+    <p class="note reveal"><i class="cue in">4</i>PESSOA e ALUNO são gravados na <b>mesma transação</b>. <b>Agora: Paulo.</b></p>
   </div>
   <p class="sheet">05 / 18</p>
 </section>
